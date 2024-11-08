@@ -27,6 +27,10 @@ dynamic = ["version"]
 [project.optional-dependencies]
 postgres = ["psycopg[binary]"]
 snowflake = ["snowflake-sqlalchemy~=1.5.1"]
+duckdb = [
+    "duckdb",       # duckdb python client
+    "duckdb-engine" # sqlalchemy engine for duckdb
+]
 tests = [
     "pytest",
     "pytest-cov",
