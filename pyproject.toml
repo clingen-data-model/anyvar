@@ -21,6 +21,7 @@ dependencies = [
     "uvicorn",
     "ga4gh.vrs[extras]~=2.0.0a11",
     "sqlalchemy~=1.4.54",
+    "pyyaml",
 ]
 dynamic = ["version"]
 
@@ -31,11 +32,16 @@ duckdb = [
     "duckdb",       # duckdb python client
     "duckdb-engine" # sqlalchemy engine for duckdb
 ]
-tests = [
+queueing = [
+    "celery[redis]~=5.4.0",
+    "aiofiles",
+]
+test = [
     "pytest",
     "pytest-cov",
     "pytest-mock",
-    "httpx"
+    "httpx",
+    "celery[pytest]",
 ]
 dev = [
     "ruff==0.5.0",
